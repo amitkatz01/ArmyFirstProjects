@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form.ByAmit</title>
+    <h1>Amit's first form</h1>
+</head>
+
+<body>
+    <form action="/form">
+        <p>
+            <label for="username">Enter username</label>
+            <input type="text" placeholder="username" id="username" name="username" required>
+            <!-- required: user cannot submit the form without filling out this field -->
+        </p>
+        <p>
+            <label for="password">Enter password</label>
+            <input type="password" placeholder="password" id="password" minlength="3" maxlength="20">
+            <!-- type password: text will be obscured -->
+            <!-- minlength and maxlength: range of characters that user can type into this field -->
+        </p>
+        <p>
+            <label for="number">Favorite number</label>
+            <input type="number" placeholder="enter a number" id="number">
+            <!-- it is possible to add min and max value to number input -->
+        </p>
+        <p>
+            <label for="date">Birthday</label>
+            <input type="date" id="date">
+        </p>
+        <p>
+            <label for="color">Favorite color</label>
+            <input type="color" id="color" name="FavoriteColor">
+        </p>
+        <p>
+            <label for="SelectAPet">Choose a favorite pet</label>
+            <select name="FavoritePet" id="SelectAPet">
+                <option value="">--please select an option--</option>
+                <option value="dolphin">dolphin</option>
+                <option value="cat">cat</option>
+                <option value="dog">dog</option>
+                <option value="parrot">parrot</option>
+                <option value="mouse">mouse</option>
+                <option value="butterfly">butterfly</option>
+                <option value="squirrel">squirrel</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="Likability">How much did you enjoy the form?</label>
+            <input type="range" id="LikabilityOfForm" name="LikabilityOfForm" min="0" max="15" value="0">
+            <!-- step="5" -->
+
+        </p>
+        <p>
+            <button>submit</button>
+        </p>
+
+        <hr>
+</body>
+</form>
+<form action="https://www.google.com/search">
+    <h3>Search Google</h3>
+    <input type="text" name="q" id="google search">
+    <button>Search</button>
+    <!-- If there's no type attribute clicking the button will result in submitting to action attribute of form -->
+</form>
+<hr>
+<form action="/blarn">
+    <h3>Do you agree to the terms of service of this form?</h3>
+    <a href="https://www.xbox.com/en-US/legal/xboxapptou">Terms of service</a>
+    <br>
+    <input type="radio" name="TermsOfService" id="Agree" value="Yes">
+    <label for="Agree">Yes</label>
+    <br>
+    <input type="radio" name="TermsOfService" id="Disagree" value="No">
+    <label for="Disagree">No</label>
+    <br>
+    <button>submit</button>
+    <hr>
+    <label for="review">Add a review of this form!</label>
+    <br>
+    <textarea name="review" id="review" cols="60" rows="10" placeholder="Type here"></textarea>
+</form>
+
+</html>
