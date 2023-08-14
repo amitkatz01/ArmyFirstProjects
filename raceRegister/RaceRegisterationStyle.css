@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    color: #57cc99;
+    text-decoration: lightgrey underline;
+    font-size: 35px;
+    /* size of text */
+}
+
+#button {
+    text-align: center;
+}
+
+button {
+    color: white;
+    font-weight: bold;
+    background-color: #22577a;
+}
+
+p {
+    text-align: center;
+}
