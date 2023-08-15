@@ -1,14 +1,22 @@
+html {
+    background-color: #c7f9cc;
+}
+
 h1 {
     text-align: center;
-    color: #57cc99;
+    color: #38a3a5;
     text-decoration: lightgrey underline;
     font-size: 35px;
     /* size of text */
 }
-
-#button {
-    text-align: center;
+h1::selection{
+    background-color: #e2fdff;
 }
+/* ::selection - applies to parts of elements that are being highlighted by the user; */
+/* h1::first-letter {
+    color:navy;
+}
+:: first leter - pseudo element - applies only to first letter of h1 */
 
 button {
     color: white;
@@ -16,6 +24,34 @@ button {
     background-color: #22577a;
 }
 
+button:hover {
+    color: black;
+    font-weight: bold;
+    background-color: #ffca3a;
+}
+
+/* hover: changes will be applied when selected element is "hovered" over by the user */
+button:active {
+    color: white;
+    font-weight: bold;
+    background-color: #22577a;
+}
+
+/* active: changes will be applied when selected element is activated */
 p {
     text-align: center;
 }
+
+input[type="password"] {
+    color: #354f52;
+}
+
+/* applies to button with type="password" */
+
+/* p:nth-of-type(2n){
+    color:navy;
+}
+#button {
+    text-align: center;
+}
+:ntn-of-type - psuedo class - applies to every other p element. */
