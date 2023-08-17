@@ -4,13 +4,17 @@ html {
 
 h1 {
     text-align: center;
-    color: #38a3a5;
-    text-decoration: lightgrey underline;
+    color: #f6fff8;
+    background-color: #6b9080;
+    text-decoration: darkgrey underline;
     font-size: 35px;
     /* size of text */
 }
 h1::selection{
     background-color: #e2fdff;
+}
+hover{
+    margin-left: 3s;
 }
 /* ::selection - applies to parts of elements that are being highlighted by the user; */
 /* h1::first-letter {
@@ -22,6 +26,9 @@ button {
     color: white;
     font-weight: bold;
     background-color: #22577a;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 5px;
 }
 
 button:hover {
@@ -55,3 +62,7 @@ input[type="password"] {
     text-align: center;
 }
 :ntn-of-type - psuedo class - applies to every other p element. */
+input{
+    border: solid 3px #6096ba;
+    border-radius: 3px;
+}
