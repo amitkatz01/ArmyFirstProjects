@@ -1,0 +1,35 @@
+#ForTryingTransformations{
+    height: 100px;
+    width: 100px;
+    background-color: slateblue;
+    transition: margin-left 1.5s;
+    transition-timing-function: ease-in;
+    /* ease-in:Starts slowly and accelerates as it progresses. */
+}
+#ForTryingTransformations:hover{
+    margin-left: 100x;
+}
+h3{
+    color:#EDF67D;
+    border:3px solid black;
+    display: inline-block;
+    padding: 15px;
+}
+#h31{
+    background-color: #724CF9;
+    transform: rotate(180deg);
+    /* rotate(angle): Rotates the element by a given angle in degrees. */
+}
+#h32{
+    background-color: #564592;
+    transform: scale(0.5);
+    /* the element will be half as large as before */
+}
+#h33{
+    background-color: #CA7DF9;
+    transform: scale(2,1);
+    /* height stays the same, width will be scaled by two */
+}
+#h_elements{
+    text-align: center;
+}
