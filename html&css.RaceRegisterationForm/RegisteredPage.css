@@ -1,0 +1,48 @@
+html {
+    background-color: #c7f9cc;
+
+}
+
+body {
+    margin: 0;
+    /* no margin  */
+}
+
+/* practicing using rems */
+h1 {
+    font-size: 3rem;
+    /* position: fixed;
+    position: fixed - the element does not move when scrolling up/down/left/right */
+    transition: 0.5;
+    display: inline-block;
+}
+
+h1:hover {
+    color: aqua;
+}
+
+label {
+    font-size: 1.5rem;
+    /* position: absolute;
+    bottom:50px;
+    position: absolute removes the element from natural flow of document (no space created for it in layout),
+    it will be positioned relativly to closet *positioned* ancestor if any. Otherwise, placed relative
+    to initial containing block. */
+}
+
+li {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.9rem;
+}
+
+img {
+    width: 79rem;
+    /* position: relative;
+    top: 100px;
+    relative position will make it possible to re-position the img while keeping other elements' position
+    unaffected.
+    top: 100px; will "push" the image down 100px. */
+}
