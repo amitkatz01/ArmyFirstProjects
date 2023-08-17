@@ -1,4 +1,7 @@
-#ForTryingTransformations{
+body{
+    background-color: #151b29;
+}
+div {
     height: 100px;
     width: 100px;
     background-color: slateblue;
@@ -6,30 +9,60 @@
     transition-timing-function: ease-in;
     /* ease-in:Starts slowly and accelerates as it progresses. */
 }
-#ForTryingTransformations:hover{
-    margin-left: 100x;
+
+div:hover {
+    margin-left: 100px;
 }
-h3{
-    color:#EDF67D;
-    border:3px solid black;
+
+h3 {
+    color: #EDF67D;
+    border: 3px solid black;
     display: inline-block;
     padding: 15px;
 }
-#h31{
+
+#h31 {
     background-color: #724CF9;
     transform: rotate(180deg);
     /* rotate(angle): Rotates the element by a given angle in degrees. */
 }
-#h32{
+
+#h32 {
     background-color: #564592;
-    transform: scale(0.5);
+    transform: translateX(100px) scale(0.5);
     /* the element will be half as large as before */
+    /*the element will shift 100px right on the X-axis */
 }
-#h33{
+
+#h33 {
     background-color: #CA7DF9;
-    transform: scale(2,1);
+    transform: skew(30deg) scale(2, 1);
+    /* scale(x,y) */
     /* height stays the same, width will be scaled by two */
+    /* the element will be skewed by 30deg on both Y-axis and X-axis */
 }
-#h_elements{
+
+#h_elements {
     text-align: center;
 }
+ p{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+ }
+ button{
+    background: none;
+    color: #ffa260;
+    border: 2px solid;
+    padding: 1rem 2rem;
+    font-size: 1em;
+    transition: all 0.19s;
+ }
+ button:hover{
+    border-color: #f1ff5c;
+    color: white;
+    box-shadow: 0 0.5rem 0.5rem -0.4rem #f1ff5c;
+    transform: translateY(-0.5rem);
+ }
