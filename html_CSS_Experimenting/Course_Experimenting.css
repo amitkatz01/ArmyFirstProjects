@@ -65,4 +65,6 @@ h3 {
     color: white;
     box-shadow: 0 0.5rem 0.5rem -0.4rem #f1ff5c;
     transform: translateY(-0.5rem);
+    cursor: pointer;
+    /* Changing mouse cursor to the "pointer" cursor icon when it's positioned over the element */
  }
