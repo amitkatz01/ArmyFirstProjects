@@ -7,8 +7,16 @@ h1 {
 #container {
     background-color: #003049;
     width: 90%;
-    height: 500px;
+    height: 30rem;
     margin: 0 auto;
     border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#container div{
+     height: 16rem;
+     width: 16rem;
 }
 
