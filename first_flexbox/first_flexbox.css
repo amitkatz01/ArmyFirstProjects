@@ -13,7 +13,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 #container div{
      height: 16rem;
