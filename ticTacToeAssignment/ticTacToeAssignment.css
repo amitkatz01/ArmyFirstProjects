@@ -1,0 +1,155 @@
+:root {
+    --cell-size: 100px;
+
+    --color: #81c3fd;
+    /* for hover */
+    --color-set: #0275d8;
+    /* when set */
+    --l: 10px;
+    /* X line-width */
+}
+
+/* :root selects the highest-level parent element (in this case <html> element)  */
+/* It is often used to define global variables for your CSS */
+
+body {
+    margin: 0;
+}
+
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    /* defines columns of grid, this way we make 9 cells for playing. */
+}
+
+.cell{
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: none;
+}
+
+/* remove border for edges */
+
+.cell.x,
+.cell.circle {
+    cursor: not-allowed;
+}
+
+/* no hover effect if the cell is already filled with one of our two characters */
+
+/* for cross when hovering over a cell */
+.board.x .cell.hoverable:not(.circle):not(.x):hover {
+    /* only applies to elements that meet the following criteria:
+    They have the "cell" class.
+    They are descendants of element with class "board" and class "x" 
+	They do not have the class "circle" or "x".
+    They are in a hovered state. */
+    background: linear-gradient(to top right, transparent calc(50% - var(--l) / 2), var(--color) calc(50% - var(--l) / 2) calc(50% + var(--l) / 2), transparent calc(50% + var(--l) / 2)),
+        linear-gradient(to bottom right, transparent calc(50% - var(--l) / 2), var(--color) calc(50% - var(--l) / 2) calc(50% + var(--l) / 2), transparent calc(50% + var(--l) / 2));
+    /* Set background using two linear gradients. */
+    /* The gradients create a diagonal pattern with a specific color. */
+    background-size: 80% 80%;
+    /* How much of the element is covered by the background pattern. */
+    background-repeat: no-repeat;
+    /* Prevents the background pattern from repeating. */
+    background-position: center;
+}
+
+/* for cross */
+.cell:not(.circle).x {
+    background: linear-gradient(to top right, transparent calc(50% - var(--l) / 2), var(--color-set) calc(50% - var(--l) / 2) calc(50% + var(--l) / 2), transparent calc(50% + var(--l) / 2)),
+        linear-gradient(to bottom right, transparent calc(50% - var(--l) / 2), var(--color-set) calc(50% - var(--l) / 2) calc(50% + var(--l) / 2), transparent calc(50% + var(--l) / 2));
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* for circle when hovering over a cell */
+.board.circle .cell.hoverable:not(.circle):not(.x):hover {
+    background: radial-gradient(var(--color) 60%, transparent 60%);
+}
+
+/* for circle */
+.cell:not(.x).circle {
+    background: radial-gradient(var(--color-set) 60%, transparent 60%);
+}
+
+
+.winningMessage {
+    /* designing winning message  */
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-set);
+    padding: 3rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#restartButton {
+    /* designing restart buttom  */
+    border-radius: 10px;
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid var(--color-set);
+    padding: .25em .5em;
+    cursor: pointer;
+    text-align: center;
+}
+
+#restartButton:hover {
+    background-color: var(--color-set);
+    color: white;
+    border-color: white;
+}
+
+.winningMessage.show {
+	display: flex;
+}
+
+.restartButtonContainer {
+    /* Center the button horizontally and vertically */
+    display: flex;
+    justify-content: center;
+}
