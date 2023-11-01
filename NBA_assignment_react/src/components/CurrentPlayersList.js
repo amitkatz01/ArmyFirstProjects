@@ -1,12 +1,13 @@
 // Fetches players data, returns a playersList object displaying the data.
 
 import { useState, useEffect } from "react";
-import PlayersList from "./PlayersList";
-
+import PlayersList from "./PlayersList.js";
+import PlayerSearch from "./UI/PlayerSearch.js";
 
 function CurrentPlayersList() {
   const [players, setPlayers] = useState([]);
   // State to store the fetched player data
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
 
@@ -30,8 +31,18 @@ function CurrentPlayersList() {
     fetchData();
   }, []);
 
+  const filteredPlayers = players.filter((player) => {
+    return (
+      player.first_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      player.last_name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+
   return (
-    <PlayersList players={players} />
+    <div>
+      <PlayerSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <PlayersList isFavorite={false} players={ filteredPlayers } />
+    </div>
   )
 };
 

@@ -7,6 +7,7 @@ function App() {
   return (
     <FavoritesListProvider>
       <div className="App">
+        <img className='basketball' src='https://cdn.nba.com/manage/2022/08/nba-ball-general-view-iso.jpg' alt = 'Basketball'/>
         <h1>NBA APPLICATION</h1>
         <div className="lists-container">
           <CurrentPlayersList />

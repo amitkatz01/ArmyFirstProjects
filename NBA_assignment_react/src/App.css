@@ -1,16 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #adb5bd;
 }
 
 .App-header {
@@ -28,23 +18,78 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.lists-container{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
+.lists-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .players-list {
   list-style: none;
   display: flex;
   flex-direction: column;
+}
+
+.basketball {
+  width: 15rem;
+  border-radius: 10px;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.input-container input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  /* Add left padding to create space for the icon */
+  margin-bottom: 1rem;
+}
+
+.input-container::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  /* Adjust the position as needed */
+  top: 35%;
+  /* Adjust the vertical alignment to the middle */
+  transform: translateY(-50%);
+  width: 1.19rem;
+  height: 1.19rem;
+  background: url('C:\Users\Dell\Desktop\ARMY\ArmyFirstProjects\NBA_assignment_react\src\assets\search.png') center no-repeat;
+  /* Update the path to your image */
+  background-size: contain;
+  cursor: pointer;
+}
+
+button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(72, 76, 122);
+  font-size: 0.7rem;
+  height: 36px;
+  padding: 6px 19px;
+  border-radius: 50px;
+  background-image: linear-gradient(180deg, #fff, #f5f5fa);
+  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+  transition: all .2s ease-out;
+}
+
+button:hover {
+  box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
+}
+
+.player-block{
+  border: 1px solid black;
+    padding: 10%;
+}
+
+.favorites-label{
+padding-left: 1.5rem;
 }

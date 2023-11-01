@@ -2,12 +2,12 @@
 
 import PlayerBlock from "./PlayerBlock";
 
-function PlayersList({ players }) {
-    console.log ('rendering players list')
+function PlayersList({ players, isFavorite }) {
+    console.log('rendering players list')
     return (
         <ul className="players-list">
             {players.map((player) => (
-                <PlayerBlock key={player.id} player={player} />
+                <PlayerBlock isFavorite = {isFavorite} key={player.id} player={player} />
                 // mapping array of players into a ul 
             ))}
         </ul>

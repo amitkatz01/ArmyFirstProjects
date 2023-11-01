@@ -4,12 +4,17 @@ import FavoritesListContext from './FavoritesList-Context';
 function favoritesListReducer(state, action) {
   switch (action.type) {
     case 'ADD_TO_FAVORITES':
-
-      console.log(state.favorites);
-      
-      return {
-        favorites: [...state.favorites, action.player],
+      if (!state.favorites.some((player) => player.id === action.player.id)) {
+        // If the player isn't already in the favorites list
+        return {
+          favorites: [...state.favorites, action.player],
+          // Add them
+        };
+      }
+      else {
+        return state
       };
+
     case 'REMOVE_FROM_FAVORITES':
       return {
         favorites: state.favorites.filter((player) => player.id !== action.id),
@@ -33,7 +38,7 @@ export function FavoritesListProvider({ children }) {
 
   const favoritesListcontext = {
     favorites: state.favorites,
-    addToFavorites:addToFavorites,
+    addToFavorites: addToFavorites,
     removeFromFavorites: removeFromFavorites,
   };
 
