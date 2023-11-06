@@ -1,0 +1,120 @@
+.App {
+  display: flex;
+  justify-content: center;
+}
+
+.gamesResultsCard {
+  width: 23rem;
+  height: 79rem;
+  top: -627px;
+  left: -207px;
+  padding: 1.3rem 1.6rem 39rem 1.6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-border-container {
+  width: 23rem;
+  height: 5.11px;
+  top: 1.5rem;
+  left: 27px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #003638;
+
+}
+
+.gamesResultsHeader h1 {
+  color: #003638;
+  font-size: 1.9rem;
+  font-weight: 900;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 10px 30px 30px 30px;
+
+}
+
+.gamesResultsHeader {
+  width: 23rem;
+  height: 3.75rem;
+  top: 1.3rem;
+  left: 1.7rem;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.teamImage {
+  width: 91px;
+  height: 91px;
+  top: 181px;
+  left: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+
+.single-result-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.single-result-display p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0;
+  color: #055052;
+}
+
+.gameResultsDisplay {
+  box-shadow: 0px 4px 4px 0px #00000040;
+  width: 23rem;
+  height: 33rem;
+  top: 96px;
+  left: 27px;
+  margin-top: 5rem;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-info h3 {
+  color: #055052;
+}
+
+.rectangle {
+  width: 45px;
+  height: 30px;
+  top: 196px;
+  left: 142px;
+  border: 0.1rem solid #055052;
+}
+
+.present-score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 7.9rem;
+  height: 5rem;
+}
+
+.group-score-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 150px;
+}
+
+.group-score-time h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #055052;
+}
