@@ -4,8 +4,8 @@ const GameResultsDisplay: React.FC = () => {
     const results = [
         {
             team1: {
-                name: 'Wales',
-                imgSrc: 'https://logowik.com/content/uploads/images/football-association-of-wales2533.jpg'
+                name: 'Brazil',
+                imgSrc: 'https://logowik.com/content/uploads/images/brazil-national-football-team1330.logowik.com.webp'
             },
             team2: {
                 name: 'Switzerland',
