@@ -32,7 +32,7 @@
 
 .basketball {
   width: 15rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 .input-container {
@@ -73,8 +73,8 @@ button {
   font-weight: 600;
   color: rgb(72, 76, 122);
   font-size: 0.7rem;
-  height: 36px;
-  padding: 6px 19px;
+  height: 2.3rem;
+  padding: 0.3rem 1.1rem;
   border-radius: 50px;
   background-image: linear-gradient(180deg, #fff, #f5f5fa);
   box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
@@ -85,11 +85,11 @@ button:hover {
   box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
 }
 
-.player-block{
+.player-block {
   border: 1px solid black;
-    padding: 10%;
+  padding: 10%;
 }
 
-.favorites-label{
-padding-left: 1.5rem;
+.favorites-label {
+  padding-left: 1.5rem;
 }
